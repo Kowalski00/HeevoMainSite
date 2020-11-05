@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+}
+header{
+    top: 0;
+    background: #226182;
+    font-family: Futura; /* Buscar o Futura FontFamily */
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px gray;
+    color: white;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 0 25px 0 black;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0px 2rem;
+}
+header nav div{
+    display:inline-block;
+}
+.headerList{
+}
+.headerList li{
+    display: inline-block;
+    border: 1px solid #3d82a6;
+    border-radius:  6.25rem;
+}
+.headerList li a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+.btnCad{
+    background-color: #3d82a6; 
+    border: none;
+    color: white;
+    font-size: inherit;
+    text-align: center;
+    text-decoration: none;
+    padding: 1.05rem 1.25rem;
+    border-radius: 6.25rem;
+    position: relative;
+    float:right;
+    margin-left: auto;
+    cursor: pointer;
+}
+.btnCad:hover{
+    background-color: #70bde6;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #226182;
+    color: white;
+    font-size: 1.25rem;
+}
+.footerContent{
+    text-align: center;
+}
+.footerContent ul{
+    list-style: none;
+}
+.footerContent ul li{
+    line-height: 35px;
+}
+.footerContent p{
+    font-weight: bold;
+}
+.footerContent a{
+    text-decoration: none;
+    color: white;
+}
+.footerContent a:hover{
+    color: gray;
+}
+.footerContent label:hover{
+    color: gray;
+}
+#iconsSocial{
+    font-size: 1.45rem;
+}
+.footerContentColumn{
+    display:inline-block;
+    text-align: left;
+    padding: 0 12% 0;
+}
+.footerContentColumn label{
+    cursor: pointer;
+    display: block;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.footerContentColumn input{
+    position: absolute;
+    opacity: 20;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.footerTitle{
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    border-color: #19516e;
+    text-align: center;
+}
+.footerTitleCenter{
+    padding-top: 15px;
+}
+.footerTitleCenter span{
+    height: 70px;
+    width: 70px;
+
+    background-image: radial-gradient(#3d82a6,#226182);
+    border-radius: 50%;
+    display: inline-block;
+}
+.footerTitleCenter img{
+    padding-top: 7px;
+    height: 55px;
+    width: 55px;
+}
