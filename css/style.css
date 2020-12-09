@@ -2,44 +2,128 @@
     font-family: Futura;
     src:url("FHF.ttf") format('truetype');
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     font-family: 'Futura';
 }
+body a {
+    text-decoration: none;
+    cursor: pointer;
+}
 header{
-    top: 0;
-    background: #226182;
+    /*    top: 0;*/
+    background: white;
     font-size: 24px;
     font-style: normal;
     font-weight: bold;
-    text-shadow: 2px 2px 2px gray;
-    color: white;
-    position: relative;
+    /*    text-shadow: 2px 2px 2px gray;*/
+    color: #226182;
+    /*    position: relative;*/
     width: 100%;
     box-shadow: 0 0 15px 0 black;
 }
-header nav{
+header .nav{
     display: flex;
-    align-items: center;
-    position: relative;
+    justify-content: space-between; /* Horizontally space-out items */
+    align-items: center; /* Vertically center align items */
     padding: 0px 2rem;
 }
-header nav div{
+header .nav div{
     display:inline-block;
 }
+#headImg img{
+    height: auto; 
+    width: auto; 
+    max-width: 205px; 
+    max-height: 205px;
+}
 .headerList{
+    float: left;
 }
 .headerList li{
     display: inline-block;
-    border: 1px solid #3d82a6;
+    border: 1px solid white;
     border-radius:  6.25rem;
+    cursor: pointer;
+    -webkit-transition: border-color 1s ease;
+    -moz-transition: border-color 1s ease;
+    -o-transition: border-color 1s ease;
+    -ms-transition: border-color 1s ease;
+    transition: border-color 1s ease;
 }
 .headerList li a{
     display: block;
     padding: 10px;
+    color: #226182;
+}
+.headerList li:hover{
+    border-color: #3d82a6;
+}
+/*
+.underline li a::after {
+content: '';
+width: 0px;
+height: 1px;
+display: block;
+background: #226182;
+transition: 300ms;
+}
+
+.underline li a:hover::after {
+width: 95%;
+}
+*/
+.aLogin{
+    /*            border: 1px solid #3d82a6;*/
+    /*    border-radius:  6.25rem;*/
+    /*    padding-right: 25px;*/
+    /*    margin: 10px 15px;*/
+    /*    float: right;*/
+    flex: 1;
+    text-align: right;
+
+}
+.hlc{
+    margin-right: 25px;
+    /*    border: 0px solid #3d82a6;*/
+    /*    transition: border-width 0.6s linear;*/
+    /*    margin-bottom: 15px;*/
+    /*    border: 1px red solid;*/
+
+}
+.hlc a{
+    color: black;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+
+}
+.hlc img{
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
     text-decoration: none;
-    color: white;
+}
+#iL{
+    color: #226182;
+    height: auto; 
+    width: auto; 
+    max-width: 25px; 
+    max-height: 25px;
+}
+.hlc:hover{
+    /*    border: 1px solid #3d82a6;*/
+    /*    box-shadow: 1px 1px 1px 2px #3d82a6;*/
+    border-radius:  6.25rem;
+    /*    padding: 10px;*/
+}
+.hlc a:visited{
+    color: #226182;
 }
 .btnCad{
     background-color: #3d82a6; 
@@ -54,21 +138,78 @@ header nav div{
     float:right;
     margin-left: auto;
     cursor: pointer;
+    -webkit-transition: background-color 1s ease;
+    -moz-transition: background-color 1s ease;
+    -o-transition: background-color 1s ease;
+    -ms-transition: background-color 1s ease;
+    transition: background-color 1s ease;
 }
 .btnCad:hover{
-    background-color: #70bde6;
+    background-color: hsl(201, 40%, 50%);
+}
+
+/*----------------------------- Modal Begin -----------------------------*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    color: #226182;
+    background-color: white;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #226182;
+    width: 40%; /* Could be more or less, depending on screen size */
+    border-radius: 0.25rem;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*----------------------------- Modal End -----------------------------*/
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    /*  padding-top: 200px;*/
 }
 
 /* -------------------------------------------------- MAIN -------------------------------------------------- */
 .content{
-    position: relative;
+    /*    position: relative;*/
     display: block;
     height: 40rem;
-/*    border: 2px solid red;*/
+    /*    border: 2px solid red;*/
 }
 #C1{
-    background-color: #d2d2d2;
-    background-image: linear-gradient(125deg, rgba(255, 0, 0, 0.0), #226182);
+    background-color: #226182;
     background-size: auto;
     background-repeat: no-repeat;
     padding: 10px;
@@ -81,32 +222,101 @@ header nav div{
 .row{
     overflow: auto;
 }
-#C2{
-    background-color: #226182;
+#C2 .c22-3{
+    width: 40%;
+    float: left;
+    margin: 0;
+    max-height: 40rem;
 }
-#C2 .col{
-    float: right;
-    width:30%;
-    margin: 10% 10%;
+#C2 .c22-3 img{
+    color: white;
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+}
+#C2 .c21-3{
+    float: left;
+    width:35%;
+    margin: 5% 10%;
+    line-height: 1.4;
+    font-size: 24px;
+}
+#C2 .c21-3 h1{
+    color: #226182;
+}
+#C2 .c21-3 p{
+    text-align: justify;
+    color: black;
+}
+
+#C3{
+    background-color: #d2d2d2;
+    background-image: linear-gradient(125deg, rgba(255, 0, 0, 0.0), #226182);
+}
+#C3 .c31-3{
+    float: left;
+    width: 45%;
+    margin: 5% 5% 5% 0;
+}
+#C3 .c31-3 img{
+    width: auto;
+    height: auto;
+    max-width: 85%; 
+    max-height: 85%;
+}
+#C3 .c32-3{
+    /*    border: 1px red solid;*/
+    border: 0px;
+    width: 25%;
+    float: left;
+    margin: 5%;
+    line-height: 2rem;
+    font-size: 18px;
+}
+#C3 .c32-3 h1{
     color: white;
 }
-.col-1-3{
+#C4{
+    background-color: white;
+}
+#C4 h1{
+    color: #226182;
+}
+#C5 p, li{
+    color: #226182;
+}
+.c1-3{
+    height: 100%;
+    float: left;
+    width:30%;
+    margin: 5%;
+}
+.c2-3{
+    height: 100%;
+    float: left;
+    width: 50%;
+    margin: 2.5%;
+}
+#C5{
+    background-color: #d2d2d2;
+}
+#C6 .col img{  
+    height: auto; 
+    width: auto; 
+    max-width: 155px; 
+    max-height: 155px;
+}
+#C6 .col{
     float: left;
     width: 30%;
     height: 30rem;
-    margin-left: 2%;
+    padding: 0px 15px;
     margin-top: 1%;
+    text-align: center;
 }
-.col-2-3{
-    float: left;
-    width: 65%;
-    height: 30rem;
-    margin-left: 2%;
-    margin-top: 1%;
-}
-.col-2-3 img{
-    float: right;
-    padding: 2%;
+#C6 .c61-3, .c62-3{
+    border-right: 2px solid black;
+    box-shadow: 1px 1px #d2d2d2;
 }
 
 /* -------------------------------------------------- FOOTER -------------------------------------------------- */
@@ -175,28 +385,36 @@ footer{
 }
 .footerTitleLeft{
     display: inline-block;
+    float: left;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 15px;
-    /*    text-align: left;*/
 }
 .footerTitleLeft span{
     padding: 25px;
     background: radial-gradient(circle, rgba(61,130,166,1) 0%, rgba(34,97,130,1) 65%);
     /* background-image: radial-gradient(#3d82a6,#226182); */
-    border-radius: 50%;
+    border-radius: 75%;
     display: inline-block;
 }
 .footerTitleLeft img{
     margin-top: 12px;
-    height: 55px;
-    width: 55px;
+    height: auto; 
+    width: auto; 
+    max-width: 55px; 
+    max-height: 55px;
+}
+.footerM{
+    display: inline-block;
+    float: left;
+    margin-top: 50px;
+    margin-left: 5px;
 }
 .footerL{
     display: inline-block;
     float: right;
     text-align: center;
-    margin: 55px 25px;
+    margin: 50px 25px;
     padding: 25px;
 }
 .footerL a{
@@ -209,3 +427,48 @@ footer{
 .footerL label:hover{
     color: gray;
 }
+/* ----------------------- Accordion ----------------------- */
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+.accordion:after {
+    content: '\2192';      
+    font-size: 13px;
+    color: #226182;
+    float: left;
+    margin-right: 1rem;
+}
+
+.active:after {
+    content: "\2193";
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    max-height: auto;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.panel p{
+    text-align: left;
+    font-size: 15px;
+    color: black;
+}
+/* ---------------------------------------------- */
