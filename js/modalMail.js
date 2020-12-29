@@ -5,7 +5,7 @@ var modalMail = document.getElementById("ModalMail");
 var btnMail = document.getElementById("btnMail");
 
 // Get the <span> element that closes the modal
-var span = document.getElementById("closeMail")[0];
+var span = document.getElementById("closeMail");
 
 // When the user clicks on the button, open the modal
 btnMail.onclick = function() {

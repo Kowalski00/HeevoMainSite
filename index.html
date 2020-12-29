@@ -9,10 +9,10 @@
         <meta name="keywords" content="Health,Tech">
 
         <title>HeeVo</title>
+        <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
 
         <!--Scripts-->
         <script type='text/javascript' src="./js/jquery.js"></script>
-        <!--        <script src="../Heevo/js/bootstrap.bundle.js" ></script>-->
 
 
         <!-- Bootstrap CSS -->
@@ -31,16 +31,16 @@
                 <div class="headerList">
                     <ul>
                         <li><a href="#C2">Sobre</a></li>
-                        <li><a href="#C6">Serviços</a></li>
-                        <li><a href="">Demo</a></li>
+                        <li><a href="#C7">FAQ</a></li>
+                        <!--                        <li><a href="">Demo</a></li>-->
                     </ul>
                 </div>
                 <div class="aLogin" >
                     <div class="hlc">
-                        <a id="btnNDisp" class="btnModal"><img id="iL" src="images/iconLogin.png">Login</a>
+                        <!--                        <a id="btnNDisp" class="btnModal"><img id="iL" src="images/iconLogin.png">Login</a>-->
                     </div>
                 </div>
-                <button id="btnNDisp2" class="btnCad btnModal">Cadastre-se</button>
+                <a href="#C6"><button id="btnNDisp2" class="btnCad btnModal">Pré-Cadastro</button></a>
             </div>
             <!--------------------- The Modal --------------------->
             <div id="ModalNDisp" class="modal">
@@ -54,13 +54,12 @@
             </div>
         </header>
         <!-- First -->
-        <div class="content jumbotron" id="C1">
+        <div id="C1">
             <section>
-                <h1 class="display-4">Dasdi astra nemper.</h1>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus vitae mi ac condimentum. Vivamus rhoncus ultricies mi. Maecenas id.</p>
-                <hr class="my-4">
-                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla ultricies nunc molestie mauris ullamcorper, rutrum consectetur est laoreet. Vestibulum eleifend magna in dolor rutrum, quis ullamcorper nulla efficitur. Phasellus porta.</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                <h1 class="display-4">O sistema de integração entre profissionais e pacientes</h1>
+                <p class="lead">Somos uma HealthTech com o objetivo de apresentar um sistema universal de atendimento à saúde, conectando o paciente aos profissionais de saúde, clínicas e farmácias possibilitando maior acesso ao sistema de saúde, público e privado!</p>
+                <!--                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla ultricies nunc molestie mauris ullamcorper, rutrum consectetur est laoreet. Vestibulum eleifend magna in dolor rutrum, quis ullamcorper nulla efficitur. Phasellus porta.</p>-->
+                <img src="images/schemaH.png">
             </section>
         </div>
 
@@ -68,59 +67,37 @@
         <!-- Second -->
         <div class="content" id="C2">
             <div class="row">
-                <div class="c21-3">
-                    <h1>HeeVo - Health eVolution</h1>
-                    <p>Somos uma HealthTech com o objetivo de apresentar um sistema universal de atendimento à saúde, conectando o paciente aos profissionais de saúde, clínicas e farmácias possibilitando maior acesso ao sistema de saúde, público e privado!</p>
-                </div>
                 <div class="c22-3">
-                    <img src="images/schemaH.png">
+                    <!--                    <img src="images/schemaH.png">-->
+                </div>
+                <div class="c21-3">
+                    <h1>HeeVo - Health Evolution</h1>
+                    <p>Estamos criando meios para que todos os envolvidos no atendimento possam se comunicar de maneira eficiente, e introduzindo funcionalidades simples de verificação de erros e auxílio ao profissional, poderemos melhorar a qualidade e agilidade do atendimento, facilitar o acesso à saúde e salvar vidas.</p>
                 </div>
             </div>
         </div>
-        
+
 
 
         <!-- Third -->
         <div class="content" id="C3">
             <div class="row">
-                <div class="c31-3">
-                    <img src="images/pHnB.png">
-                </div>
-                <div class="c32-3">
-                    <h1>Para os pacientes</h1>
-                    <p>Todo o seu histório médico na palma da sua mão</p>
-                    <ul>
-                        <li>Praesent mollis ultrices orci, eu tristique.</li>
-                        <li>Donec pharetra justo eget turpis egestas fringilla.</li>
-                        <li>Integer finibus lacinia erat.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Fourth -->
-        <div class="content" id="C4">
-            <div class="row">
                 <div class="c1-3">
                     <h1>Profissionais da Sáude</h1>
                     <p>Acesso ao histórico de pacientes na sua tela.</p>
                     <ul>
-                        <li>Praesent mollis ultrices orci, eu tristique.</li>
-                        <li>Donec pharetra justo eget turpis egestas fringilla.</li>
-                        <li>Integer finibus lacinia erat.</li>
+                        <li>Envio de receitas para seu paciente.</li>
+                        <li>Consulta de bulários.</li>
+                        <li>Consulta de dosagens/detalhes de um medicamento.</li>
                     </ul>
                 </div>
                 <div class="c2-3">
+                    <img src="images/dC.png">
                 </div>
             </div>
         </div>
-        
-        <!-- FIfth -->
         <div class="content" id="C5">
             <div class="row">
-                <div class="c2-3">
-                </div>
                 <div class="c1-3">
                     <h1>Farmácias</h1>
                     <p>Acesso ao histórico de pacientes na sua tela.</p>
@@ -130,32 +107,111 @@
                         <li>Integer finibus lacinia erat.</li>
                     </ul>
                 </div>
+                <div class="c2-3">
+                    <img src="images/pP.png">
+                </div>
             </div>
         </div>
-        
-        <!-- Sixth -->
+
+        <div class="content" id="C4">
+            <div class="row">
+                <div class="c41-3">
+                    <img src="images/pHnB.png">
+                </div>
+                <div class="c42-3">
+                    <h1>Para os pacientes</h1>
+                    <p>Todo o seu histórico médico na palma da sua mão</p>
+                    <ul>
+                        <li>Acesso à receitas cadastradas pelo seu médico.</li>
+                        <li>Alarme de remédios.</li>
+                        <li>Pesquisa de profissionas e fármacias ao seu redor.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="content" id="C6">
             <div class="row">
-                <div class="col c61-3">
-                    <img src="images/cC3.svg">
-                    <h1 class="display-4 font-weight-normal">Profissionais da Saúde</h1>
-                    <p class="lead font-weight-normal">O profissional poderá prescrever, requisitar exames e acompanhar o paciente de qualquer lugar, inclusive atualizações de outros profissionais</p>
-                    <p>Mediante aprovação do paciente, o profissional por sua vez terá acesso a todos os dados, agilizando o atendimento.</p>
-                </div>
-                <div class="col c62-3">
-                    <img src="images/pC3.png">
-                    <h1 class="display-4 font-weight-normal">Pacientes</h1>
-                    <p class="lead font-weight-normal">O paciente terá acesso a todo seu prontuário, resultado de exames e medicamentos, sendo possível ativar alarmes para não esquecer de tomá-los.</p>
-                </div>
-                <div class="col c63-3">
-                    <img src="images/fC3.svg">
-                    <h1 class="display-4 font-weight-normal">Farmácias</h1>
-                    <p class="lead font-weight-normal">A farmácia poderá receber a prescrição, assim entrando em contato com o paciente informando o orçamento, assim que aprovado  é realizada  a separação da medicação.</p>
-                    <p>Com todos os dados do paciente disponibilizados pelo sistema, poderá realizar a  dispensação de medicamentos controlados, facilitando e agilizando o processo e assim como auxiliando na fidelização dos pacientes.</p>
+                <div class="cm">
+                    <form role="form" method="post">
+                        <h2>Se interessou? Realize um pré-cadastro!</h2>
+                        <div class="rowMail"> 
+                            <div class="form-group col-25">
+                                <label for="name">Nome completo:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" class="form-control" id="name" name="name"   required maxlength="50">
+                            </div>
+                        </div>
+                        <div class="rowMail">
+                            <div class="form-group col-25">
+                                <label for="email">Email:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="email" class="form-control"id="email" name="email" required maxlength="50">
+                            </div>
+                        </div>
+                        <div class="rowMail"> 
+                            <div class="form-group col-25">
+                                <label for="name">Usuário:</label>
+                            </div>
+                            <div class="col-75">
+                                <textarea class="form-control" type="textarea" name="message"id="message" placeholder="Your Message Here"maxlength="6000" rows="7"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-success btn-block" id="btnContactUs">Enviar</button>
+                    </form>
                 </div>
             </div>
         </div>
-        
+        <div class="content" id="C7">
+            <div class="row">
+                <div class="title">
+                    <p id="p1">FAQ </p><p id="p2">Perguntas Frequentes</p>
+                </div>
+                
+                <div class="accordionWrapper">
+                    <div class="accordionItem close">
+                        <h2 class="accordionItemHeading">Como paciente, pagarei pelo serviço?</h2>
+                        <div class="accordionItemContent">
+                            <p>Não, pacientes poderão utilizar o sistema de graça.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordionItem close">
+                        <h2 class="accordionItemHeading">E para profissionais, como será cobrado?</h2>
+                        <div class="accordionItemContent">
+                            <p>Para utilização de todas as funcionalidades que o sistema oferece profissionais deverão pagar uma mensalidade.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordionItem close">
+                        <h2 class="accordionItemHeading">Os dados do paciente ficam disponíveis para todo mundo?</h2>
+                        <div class="accordionItemContent">
+                            <p>Os dados dos pacientes somente poderão ser visualizados mediante à aprovação do paciente. Ou seja, quando um profissional da saúde desejar visualizar seus dados ou histórico, deverá pedir aprovação ao paciente pelo sistema, e então o paciente poderá liberar a visualização de seu perfil.</p>
+                        </div>
+                    </div>
+                    <div class="accordionItem close">
+                        <h2 class="accordionItemHeading">Onde fica o servidor da HeeVo?</h2>
+                        <div class="accordionItemContent">
+                            <p>Atualmente é utilizado o serviço fornecido pela GoDaddy. Futuramente teremos nosso próprio serviço, no qual o sistema será disponibilizado por Cloud.</p>
+                        </div>
+                    </div>
+                    <div class="accordionItem close">
+                        <h2 class="accordionItemHeading">Quais as funcionalidades da HeeVo?</h2>
+                        <div class="accordionItemContent">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="accordionItem close">
+                        <h2 class="accordionItemHeading">Quais os diferenciais da HeeVo em relação aos concorrentes?</h2>
+                        <div class="accordionItemContent">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Foot -->
         <footer>
@@ -164,7 +220,7 @@
                     <ul>
                         <li><p>HeeVo</p></li>
                         <li><a href="#C2">Sobre nós</a></li>
-                        <li><a href="#ModalFAQ" id="btnFAQ" class="btnModal">Perguntas Frequentes</a></li>
+                        <!--                        <li><a href="#C6" id="btnFAQ" class="btnModal">Perguntas Frequentes</a></li>-->
                         <li><a href="#ModalMail" id="btnMail" class ="btnModal">Contato</a></li>
                     </ul>
 
@@ -175,64 +231,37 @@
                     <div class="modal-content">
                         <span id="closeMail" class="close">&times;</span>
                         <form role="form" method="post" id="reused_form">
-                            <p>
-                                Send your message in the form below and we will get back to you as early as possible.
-                            </p>
-
-                            <div class="form-group">
-                                <label for="name">
-                                    Nome:</label>
-                                <input type="text" class="form-control"
-                                       id="name" name="name"   required maxlength="50">
-
+                            <p>Deseja entrar em contato conosco? Envie um email e retornaremos assim que possível.</p>
+                            <div class="rowMail"> 
+                                <div class="form-group col-25">
+                                    <label for="name">Nome:</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" class="form-control" id="name" name="name"   required maxlength="50">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="email">
-                                    Email:</label>
-                                <input type="email" class="form-control"
-                                       id="email" name="email" required maxlength="50">
+                            <div class="rowMail">
+                                <div class="form-group col-25">
+                                    <label for="email">Email:</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="email" class="form-control"id="email" name="email" required maxlength="50">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="name">
-                                    Assunto:</label>
-                                <textarea class="form-control" type="textarea" name="message"
-                                          id="message" placeholder="Your Message Here"
-                                          maxlength="6000" rows="7"></textarea>
+                            <div class="rowMail"> 
+                                <div class="form-group col-25">
+                                    <label for="name">Assunto:</label>
+                                </div>
+                                <div class="col-75">
+                                    <textarea class="form-control" type="textarea" name="message"id="message" placeholder="Your Message Here"maxlength="6000" rows="7"></textarea>
+                                </div>
                             </div>
-                            <button type="submit" class="btn btn-lg btn-success btn-block" id="btnContactUs">Enviar! →</button>
+                            <button type="submit" class="btn btn-lg btn-success btn-block" id="btnContactUs">Enviar</button>
                         </form>
                     </div>
 
                 </div>
                 <!----------------------------------- Modal Mail ----------------------------------->
-
-                <!----------------------------------- Modal FAQ ----------------------------------->
-                <div id="ModalFAQ" class="modal">
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <span id="closeFAQ" class="close">&times;</span>
-                        <p>FAQ - Perguntas frequentes</p>
-                        <button class="accordion">Como paciente, pagarei pelo serviço?</button>
-                        <div class="panel">
-                            <p>Não, pacientes poderão utilizar o sistema de graça.</p>
-                        </div>
-
-                        <button class="accordion">Pergunta 2</button>
-                        <div class="panel">
-                            <p>In interdum metus id bibendum euismod. In consectetur quam nibh, vel finibus tortor vestibulum.</p>
-                        </div>
-
-                        <button class="accordion">Pergunta 3</button>
-                        <div class="panel">
-                            <p>Donec mattis arcu sed tortor faucibus fermentum. Suspendisse gravida eget erat vel sagittis. Sed sagittis, lorem quis tincidunt placerat, ex lectus fermentum nisl, nec congue nunc turpis sed nisi.</p>
-                        </div>
-                        <button class="accordion">Pergunta 4</button>
-                        <div class="panel">
-                            <p>Phasellus nunc nulla, lobortis eu felis a, porta mollis risus. Cras tempus dolor et velit dictum cursus. Cras luctus sapien velit, in venenatis sapien finibus in. Curabitur eget mauris eu odio vulputate tempus. Quisque sollicitudin sodales eros, eget interdum erat faucibus fringilla. Maecenas ornare blandit euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus.<br/>Nam venenatis metus non justo ultrices porttitor. Vivamus ullamcorper enim eu tortor tempor, nec ultrices mi malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris malesuada faucibus enim. Vestibulum mattis est in dignissim efficitur. Curabitur a malesuada augue.</p>
-                        </div>
-                    </div>
-                </div>
-                <!----------------------------------- Modal FAQ ----------------------------------->
 
 
                 <div class="footerContentColumn">
