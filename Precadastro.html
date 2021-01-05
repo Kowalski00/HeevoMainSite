@@ -12,8 +12,132 @@
         <title>HeeVo</title>
         <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
 
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            input, select, textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: vertical;
+
+            }
+
+            label {
+                padding: 12px 12px 12px 0;
+                display: inline-block;
+            }
+
+            input[type=submit] {
+                background-color: hsl(201, 40%, 50%);
+                color: white;
+                margin: 5rem 25% 0;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                width: 50%;
+            }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+            .container {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+            .title{
+                width: 100%;
+                text-align: center;
+            }
+            .imgLogo{
+                width: 100%;
+                text-align: center;
+            }
+            .imgLogo img{
+                max-height: 15rem;
+                max-width: 15rem;
+            }
+            .col-25 {
+                float: left;
+                width: 50%;
+                margin-top: 6px;
+                text-align: center;
+
+            }
+            .row{
+                width: 50%;
+                margin: 0 25%;
+            }
+
+            .col-75 {
+                float: left;
+                width: 75%;
+                margin-top: 6px;
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            form{
+                width:80%;
+                margin:5% 10%;
+            }
+            .btn{
+                width: 50%;
+                margin: 0 25%;
+            }
+            .btn button{
+                background-color: hsl(201, 40%, 50%);
+                color: white;
+                margin: 0 25% 5rem;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                width: 50%;
+            }
+            .btn button:hover {
+                background-color: #45a049;
+            }
+
+            /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 600px) {
+                .col-25, .col-75, input[type=submit] {
+                    width: 100%;
+                    margin-top: 0;
+                }
+            }
+        </style>
+
         <!--Scripts-->
-        <script type='text/javascript' src="./js/jquery.js"></script>
+        <script
+                src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+                crossorigin="anonymous"></script>
+        <script>
+            function SubForm (){
+                $.ajax({
+                    url:'https://api.apispreadsheets.com/data/5966/',
+                    type:'post',
+                    data:$("#myForm").serializeArray(),
+                    success: function(){
+                        alert("Form Data Submitted :)")
+                    },
+                    error: function(){
+                        alert("There was an error :(")
+                    }
+                });
+            }
+        </script>
 
 
         <!-- Bootstrap CSS -->
@@ -22,60 +146,111 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     </head>
-    <body style="height: 100%; ">
+    <body>
 
-        <div class="content" id="C6">
-            <div class="row">
-                <div class="cm">
-                    <form role="form" id='foo' method="post">
-                        <h2>Se interessou? Realize um pré-cadastro!</h2>
-                        <p>
-                            <label>Name</label>
-                            <input id='name' name='name' type='text'>
-                        </p><p>
-                        <label>Email Address</label>
-                        <input id='email' name='email' type='email'>
-                        </p><p>
-                        <label>Phone Number</label>
-                        <input id='phone' name='phone' type='tel'>
-                        </p><p>
-                        <label>Message</label>
-                        <textarea id='message' name='message' rows='5'></textarea>
-                        </p>
-                        <div id='success'></div>
-                        <button type='submit'>Send</button>
-                        <!--
-<div class="rowMail"> 
-<div class="form-group col-25">
-<label for="name">Sexo:</label>
-</div>
-<input type="radio" id="male" name="gender" value="male">
-<label for="male">Homem</label><br>
-<input type="radio" id="female" name="gender" value="female">
-<label for="female">Mulher</label><br>
-<input type="radio" id="other" name="gender" value="other">
-<label for="other">Prefiro não informar</label>
-</div>
-<div class="rowMail"> 
-<div class="form-group col-25">
-<label for="name">Usuário:</label>
-</div>
-<input type="radio" id="Professional" name="user" value="Professional">
-<label for="Professional">Profissional Clínico</label><br>
-<input type="radio" id="Patient" name="user" value="Patient">
-<label for="Patient">Paciente</label><br>
-<input type="radio" id="Curious" name="user" value="Curious">
-<label for="curious">Curioso</label>
-</div>
-<input type="reset">
--->
-                        <div id='success'></div>
-<!--                        <button type="submit" class="btn btn-lg btn-success btn-block" id="btnContactUs">Enviar</button>-->
-                    </form>
-                </div>
+
+        <div class="container" id="C6">
+            <div class="imgLogo">
+                <img src="images/Copy%20of%20LOGO%20HEEVO%20(2).png">
             </div>
+            <div class="title">
+                <h1>Pré-cadastro</h1>
+                <p>Bem vindo ao pré cadastro da Heevo, a partir dele será possível receber descontos especiais e novidades sobre o lançamento da plataforma.</p>
+            </div>
+            <form id="myForm">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fullname">Nome Completo</label>
+                    </div>
+                    <div class="col-25">
+                        <input type="text" id="fullname" name="fullname" placeholder="John Doe">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col-25">
+                        <input type="email" id="email" name="email" placeholder="john@mail.com">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="datnasc">Data de Nascimento</label>
+                    </div>
+                    <div class="col-25">
+                        <input style="resize: none;" type="date" id="datnasc" name="datnasc" placeholder="DD/MM/YYYY">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="user">Usuário</label>
+                    </div>
+                    <div class="col-25">
+                        <select id="user"  name="user">
+                            <option disabled selected value>Selecione..</option>
+                            <option value="paciente">Paciente</option>
+                            <option value="profissional">Profissional de Saúde</option>
+                            <option value="farmacia">Comercio de Saúde (Farmácia, Laboratório, Clínica de estética)</option>
+                        </select>
+                    </div>
+                </div>
+
+            </form>
+            <div class="btn">
+                <button onclick="SubForm()">Submit</button>
+            </div>
+
         </div>
 
+        <!--
+<div class="container" id="C6">
+<div class="imgLogo">
+<img src="images/Copy%20of%20LOGO%20HEEVO%20(2).png">
+</div> 
+<div>
+<h1>Pré-cadastro HeeVo</h1>
+<p>Bem vindo ao pré cadastro da Heevo, a partir dele será possível receber descontos especiais e novidades sobre o lançamento da plataforma.</p>
+</div>
+<form id="myForm">
+<div class="row">
+<div class="col-25">
+<label >Nome completo</label>
+</div>
+<div class="col-25">
+<input name="fullname" />
+</div>
+</div>
+<div class="row">
+<div class="col-25">
+<label>Email</label>
+</div>
+<div class="col-25">
+<input name="email" />
+</div>
+</div>
+<div class="row">
+<div class="col-25">
+<label>Age</label>
+</div>
+<div class="col-25">
+<input type="radio" id="age" name="datnasc" value="18-35" /> 18-35<br/>
+<input type="radio" id="age" name="datnasc" value="35+" /> 35+<br/>
+</div>
+</div>
+<div class="row">
+<div class="col-25">
+<label>Message</label>
+</div>
+<div class="col-25">
+<textarea name="user">
+</textarea>
+</div>
+</div>
+</form>
+</div>
+<button onclick="SubForm()">Submit</button>
+-->
         <!-- Foot -->
         <footer>
             <div class="footerTitle">
