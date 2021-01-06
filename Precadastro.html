@@ -130,13 +130,56 @@
                     type:'post',
                     data:$("#myForm").serializeArray(),
                     success: function(){
-                        alert("Form Data Submitted :)")
+                        alert("Obrigado por se cadastrar no nosso site, enviaremos descontos especiais e novidades sobre a plataforma por e-mail.")
                     },
                     error: function(){
-                        alert("There was an error :(")
+                        alert("Ocorreu um erro :(")
                     }
                 });
             }
+            $('#user').ready(function () {
+                $('.selPro,.selPac,.selCom,.selComNom').hide();
+
+                // Paciente
+                $('#user').change(function () {
+                    var selected = $('#user option:selected').text();
+                    $('.selPac').toggle(selected == "Paciente");
+                });
+                // Profissional
+                $('#user').change(function () {
+                    var selected = $('#user option:selected').text();
+                    $('.selPro').toggle(selected == "Profissional de Saúde");
+                });
+                // Comércio
+                $('#user').change(function () {
+                    var selected = $('#user option:selected').text();
+                    $('.selCom,.selComNom').toggle(selected == "Comercio de Saúde (Farmácia, Laboratório, Clínica de estética)");
+                });
+                // Hide outro
+                $('#user').change(function () {
+                    var selected = $('#user option:selected').text();
+                    $('.selOtherProf').hide(selected != "Profissional de Saúde");
+                    $('.selOtherCom').hide(selected != "Comercio de Saúde (Farmácia, Laboratório, Clínica de estética)");
+
+                });
+
+            });
+            $('#profession').ready(function () {
+                $('.selOtherProf').hide();
+
+                $('#profession').change(function () {
+                    var selected = $('#profession option:selected').text();
+                    $('.selOtherProf').toggle(selected == "Outro");
+                });
+            });
+            $('#commerce').ready(function () {
+                $('.selOtherCom').hide();
+
+                $('#commerce').change(function () {
+                    var selected = $('#commerce option:selected').text();
+                    $('.selOtherCom').toggle(selected == "Outro");
+                });
+            });
         </script>
 
 
@@ -163,7 +206,7 @@
                         <label for="fullname">Nome Completo</label>
                     </div>
                     <div class="col-25">
-                        <input type="text" id="fullname" name="fullname" placeholder="John Doe">
+                        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required="required">
                     </div>
                 </div>
                 <div class="row">
@@ -171,7 +214,15 @@
                         <label for="email">Email</label>
                     </div>
                     <div class="col-25">
-                        <input type="email" id="email" name="email" placeholder="john@mail.com">
+                        <input type="email" id="email" name="email" placeholder="john@mail.com" required="required">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="phone">Telefone</label>
+                    </div>
+                    <div class="col-25">
+                        <input type="tel" id="phone" name="phone" placeholder="(XX)XXXX-XXXX" required="required">
                     </div>
                 </div>
                 <div class="row">
@@ -179,7 +230,7 @@
                         <label for="datnasc">Data de Nascimento</label>
                     </div>
                     <div class="col-25">
-                        <input style="resize: none;" type="date" id="datnasc" name="datnasc" placeholder="DD/MM/YYYY">
+                        <input style="resize: none;" type="date" id="datnasc" name="datnasc" placeholder="DD/MM/YYYY" required="required">
                     </div>
                 </div>
                 <div class="row">
@@ -187,12 +238,70 @@
                         <label for="user">Usuário</label>
                     </div>
                     <div class="col-25">
-                        <select id="user"  name="user">
+                        <select id="user"  name="user" required="required">
                             <option disabled selected value>Selecione..</option>
                             <option value="paciente">Paciente</option>
                             <option value="profissional">Profissional de Saúde</option>
-                            <option value="farmacia">Comercio de Saúde (Farmácia, Laboratório, Clínica de estética)</option>
+                            <option value="comercio">Comercio de Saúde (Farmácia, Laboratório, Clínica de estética)</option>
                         </select>
+                    </div>
+                </div>
+                <div class="row selPro">
+                    <div class="col-25">
+                        <label for="profession">Profissão</label>
+                    </div>
+                    <div class="col-25">
+                        <select id="profession"  name="profession">
+                            <option disabled selected value>Selecione..</option>
+                            <option value="paciente">Médico</option>
+                            <option value="profissional">Dentista</option>
+                            <option value="nutricionista">Nutricionista</option>
+                            <option value="psicologo">Psicólogo</option>
+                            <option value="psiquiatra">Psiquiatra</option>
+                            <option value="fonoaudiologo">Fonoaudiólogo</option>
+                            <option value="fisioterapeuta">Fisioterapeuta</option>
+                            <option value="terapeutaocupacional">Terapeuta Ocupacional</option>
+                            <option value="otherProf">Outro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row selOtherProf">
+                    <div class="col-25">
+                        <label for="otherProf">Informe sua profissão:</label>
+                    </div>
+                    <div class="col-25">
+                        <input type="text" id="otherProf" name="otherProf" placeholder="">
+                    </div>
+                </div>
+                <div class="row selCom">
+                    <div class="col-25">
+                        <label for="commerce">Comércio</label>
+                    </div>
+                    <div class="col-25">
+                        <select id="commerce"  name="commerce">
+                            <option disabled selected value>Selecione..</option>
+                            <option value="farmacia">Farmácia</option>
+                            <option value="laboratorioDiagnostico">Laboratório Diagnóstico</option>
+                            <option value="clinicaEstetica">Clínica de Estética</option>
+                            <option value="empresaProtese">Empresa de prótese/ortese</option>
+                            <option value="otherCom">Outro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row selOtherCom">
+                    <div class="col-25">
+                        <label for="otherCom">Informe seu comércio:</label>
+                    </div>
+                    <div class="col-25">
+                        <input type="text" id="otherCom" name="otherCom" placeholder="">
+                    </div>
+                </div>
+                <div class="row selComNom">
+                    <div class="col-25">
+                        <label for="commerceName">Informe o nome de seu comércio:</label>
+                    </div>
+                    <div class="col-25">
+                        <input type="text" id="commerceName" name="commerceName" placeholder="Panvel,Frischmann..">
                     </div>
                 </div>
 
