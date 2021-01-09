@@ -1,0 +1,7 @@
+RewriteCond %{HTTP_HOST} ^(www.)?heevo.life$
+RewriteCond %{REQUEST_URI} !^/Precadastro/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /Precadastro/$1
+RewriteCond %{HTTP_HOST} ^(www.)?heevo.life$
+RewriteRule ^(/)?$ Precadastro/index.html [L]

@@ -179,7 +179,7 @@ width: 95%;
 .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 1.75em;
     font-weight: bold;
 }
 
@@ -205,9 +205,10 @@ width: 95%;
 /* -------------------------------------------------- MAIN -------------------------------------------------- */
 .content{
     /*    position: relative;*/
+    width: 100%;
     display: block;
-    height: 40rem;
-    /*    border: 2px solid red;*/
+    height: 40vw;
+/*    border: 2px solid red;*/
 }
 #C1{
     background-image: linear-gradient(0deg, white, #226182);
@@ -219,7 +220,7 @@ width: 95%;
 #C1 h1{
     color:white;
     text-align: center;
-    font-size: 36px;
+    font-size: 2.25em;
 }
 #C1 p{
     text-align: center;
@@ -227,7 +228,7 @@ width: 95%;
 }
 #C1 .lead{
     padding: 2rem 25%;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 #C1 img{
     color: white;
@@ -241,8 +242,8 @@ width: 95%;
     overflow: auto;
 }
 #C2 .c22-3{
-    width: 40%;
-    float: left;
+    width: 45%;
+    float: right;
     margin: 0;
     max-height: 40rem;
 }
@@ -254,60 +255,80 @@ width: 95%;
 }
 #C2 .c21-3{
     float: right;
-    width:35%;
-    margin: 5% 10%;
-    line-height: 1.4;
-    font-size: 24px;
+    width:40%;
+    margin: 1vw 3vw;
 }
 #C2 .c21-3 h1{
     color: #226182;
+    font-size: 2.5vw;
+}
+#C2 .c21-3 p{
+    margin: 2vw 0;
 }
 #C2 .c21-3 p{
     text-align: justify;
     color: black;
+    font-size: 1.7vw;
+    line-height: 2.5vw;
 }
 .c1-3{
     height: 100%;
     float: left;
     width:30%;
-    margin: 5%;
 }
 .c2-3{
     height: 100%;
     float: left;
     width: 50%;
-    margin: 2.5%;
 }
 #C3{
     background-color: #226182;
-    /*    background-image: linear-gradient(125deg, rgba(255, 0, 0, 0.0), #226182);*/
-    /*    background-image:linear-gradient(45deg, #d2d2d2 12%, transparent 12%), linear-gradient(135deg, #d2d2d2 12%, transparent 12%), linear-gradient(45deg, white 40%, transparent 40%), linear-gradient(135deg, white 40%, transparent 40%);*/
     background-image: linear-gradient(45deg, white 40%, transparent 40%), linear-gradient(135deg, white 40%, transparent 40%);
-
-    /*    margin: 0;*/
-    line-height: 2rem;
-    font-size: 22px;
+}
+#C3 a{
+    color:#226182;
+    -webkit-transition: color 0.7s ease;
+    -moz-transition: color 0.7s ease;
+    -o-transition: color 0.7s ease;
+    -ms-transition: color 0.7s ease;
+    transition: color 0.7s ease;
+}
+#C3 a:hover{
+    color:hsl(201, 40%, 50%); 
 }
 #C3 h1{
     color: #226182;
+    font-size: 3vw;
 }
 #C3 .c1-3{
     float:left;
     padding-left: 5%;
 }
 #C3 .c2-3{
-    float:right;
+    float:left;
     margin:0;
 }
-#C3 img{
+#C3 .c2-3 img{
     width: auto;
     height: auto;
     max-width: 90%; 
     max-height: 90%;
-    float: right;
+/*    float: right;*/
+    bottom: 0;
+    right: 0;
+}
+#C3 p{
+    font-size: 1.6vw;
 }
 #C3 li{
     color: #226182;
+    font-size: 1.3vw;
+}
+#C3 ul{
+    margin: 2em 0;
+}
+#C3 a{
+    font-size: 1.6vw;
 }
 #C4{
     background-color: white;
@@ -315,7 +336,7 @@ width: 95%;
 }
 #C4 .c41-3{
     float: left;
-    width: 45%;
+    width: 50%;
     margin: 5% 5% 5% 0;
 }
 #C4 .c41-3 img{
@@ -327,28 +348,52 @@ width: 95%;
 #C4 .c42-3{
     /*    border: 1px red solid;*/
     border: 0px;
-    width: 25%;
+    width: 40%;
     float: left;
-    margin: 5%;
-    line-height: 2rem;
-    font-size: 22px;
+    padding-right: 5%;
+    line-height: 2.8vw;
+}
+#C4 li{
+    font-size: 1.5vw;
 }
 #C4 .c42-3 h1{
     color: #226182;
+    font-size: 3vw;
+}
+#C4 .c42-3 p{
+    font-size: 1.7vw;
+}
+#C4 a{
+    color:#226182;
+    -webkit-transition: color 0.7s ease;
+    -moz-transition: color 0.7s ease;
+    -o-transition: color 0.7s ease;
+    -ms-transition: color 0.7s ease;
+    transition: color 0.7s ease;
+    font-size: 1.7vw;
+}
+#C4 a:hover{
+    color:hsl(201, 40%, 50%); 
 }
 #C4 li{
     color: black;
 }
 #C5{
     background-color: white;
-    line-height: 2rem;
-    font-size: 22px;
+}
+#C5 h1{
+    font-size: 3vw;
+    color:#226182;
+}
+#C5 p{
+    font-size: 1.7vw;
+}
+#C5 li{
+    font-size: 1.5vw;
+    line-height: 2vw;
 }
 #C5 .c1-3{
     padding-left: 5%;
-}
-#C5 p, li{
-    color: #226182;
 }
 #C5 img{
     width: auto;
@@ -366,84 +411,81 @@ width: 95%;
     margin: 0 25%;
     text-align: center;
 }
-#C7{
+#FAQ{
     /*    background-image: linear-gradient(355deg, #d2d2d2 40%, transparent 80%);*/
     background-color: #d2d2d2;
     padding-top: 5%;
     background-image: linear-gradient(355deg, white 20%, transparent 80%);
+    height: 50vw;
 }
-#C7 h1{
+#FAQ h1{
     color: #226182; 
 }
-#C7 p{
+#FAQ p{
     text-align: center
 }
-#C7 .title{
+#FAQ .title{
     text-align: center;
 }
-#C7 #p1,#p2{
+#FAQ #p1,#p2{
     display: inline-block;
 }
-#C7 #p1{
-    font-size: 36px;
-    margin: 0 1rem;
+#FAQ #p1{
+    font-size: 3vw;
+    margin: 0 1vw;
     color: #226182;
 }
-#C7 #p2{
-    font-size: 32px;
+#FAQ #p2{
+    font-size: 2.7vw;
 }
-#C7 .c1-3{
+#FAQ .c1-3{
     float: none;
     margin: 1% 5%;
     width: 80%;
 }
-#C7 li{
+#FAQ li{
     color: black;
 }
 #CPC{
-    display: block;
-    height:10rem;
-    margin: 25px 0 40px;
-}
-#CPC .cm{
-    border: solid hsla(201, 40%, 50%, 0.6) 1px;
-    padding: 35px 0;
-    margin: 10px auto;
-    box-shadow: -5px 5px 8px hsl(201, 40%, 50%);
-    background-color: hsla(201, 40%, 50%, 0.6);
-}
-#CPC ul{
-    list-style: none;
-}
-#CPC li{
-
+    text-align: center;
+    height:20vw;
 }
 #CPC a{
-    padding: 5px 25px;
-    border-radius:  6.25rem;
-    cursor: pointer;
-    /*    border: 2px solid hsl(201, 40%, 50%);*/
-    font-size: 32px;
+    display: inline-block;
     background-color: hsl(201, 40%, 50%);
-    color:white;
-    -webkit-transition: background-color 0.7s ease;
-    -moz-transition: background-color 0.7s ease;
-    -o-transition: background-color 0.7s ease;
-    -ms-transition: background-color 0.7s ease;
-    transition: background-color 0.7s ease;
+    margin: 2em 1em;
+    padding: 1em 1.5em;
+    color: white;
+    border-radius: 1.5em;
+    text-decoration: none;
+    font-size: 3vw;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
 }
 #CPC a:hover{
     background-color: #226182;
 }
+.svgel{ 
+    height: 1.1rem;
+    width: 1.1rem;
+    max-height: 1.1rem;
+    max-width: 1.1rem;
+}
+
 
 /* -------------------------------------------------- FOOTER -------------------------------------------------- */
 footer{
-    position: relative;
+/*    position: relative;*/
     bottom: 0;
     width: 100%;
     background: #226182;
     color: white;
     font-size: 1.25rem;
+    display: inline-block;
+    text-align: center;
 }
 footer ul{
     list-style: none;
@@ -463,38 +505,31 @@ footer label{
     -ms-user-select: none;
     user-select: none;
 }
-.footerTitle{
-    border-style: solid;
-    border-width: 1px 0 0 0;
-    border-color: #19516e;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-}
-.footerTitle a,label{
+footer a,label{
     -webkit-transition: color 0.4s ease;
     -moz-transition: color 0.4s ease;
     -o-transition: color 0.4s ease;
     -ms-transition: color 0.4s ease;
     transition: color 0.4s ease;
 }
-.footerTitle a:visited{
+footer a:visited{
     color:white;
 }
-.footerTitle a:hover{
+footer a:hover{
     color: hsl(201, 40%, 50%);
 }
-.footerTitle label:hover{
+footer label:hover{
     color: hsl(201, 40%, 50%);
 }
 .f1-4{
-    display: inline-block;
+    display: block;
     float: left;
     width: 24%;
     height: 12rem;
+/*    border: red 1px solid;*/
 }
-.L{
-   padding-left: 4rem; 
+.L img{
+    padding:0.5em;
 }
 .L p{
     display: table-cell;
@@ -518,17 +553,6 @@ footer label{
     padding-right: 5px;
 /*    border: 1px red solid;*/
 }
-.footerL{
-    display: inline-block;
-    float: right;
-    text-align: center;
-    margin: 50px 25px;
-    padding: 25px;
-}
-.footerL a{
-    color: white;
-    margin-left: 2rem;
-}
 .vC{
     border: transparent 1px solid; /* do not remove, helps center vertically */
     position: relative;
@@ -546,7 +570,7 @@ footer label{
     width: 50%;
     /*    background-color: #c2e0ef;*/
     margin: auto; 
-    padding: 1rem;
+    padding: 1vw;
     /*    border: 1px solid #aed5ea;*/
     border-radius: 0.65rem;
     box-sizing:border-box;
@@ -568,7 +592,7 @@ footer label{
     -moz-border-radius: 0.65rem;
     border-radius: 0.65rem;
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 1.6vw;
     -webkit-transition: background-color 0.5s ease;
     -moz-transition: background-color 0.5s ease;
     -o-transition: background-color 0.5s ease;
@@ -591,7 +615,7 @@ footer label{
 .open .accordionItemContent{
     padding: 10px;
     background-color: transparent;
-    /*    width: 100%;*/
+    font-size: 1.5vw;
     margin: 0px 0px 5px 0px;
     display:block;
     -webkit-transform: scaleY(1);

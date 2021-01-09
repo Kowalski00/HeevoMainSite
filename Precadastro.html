@@ -54,6 +54,8 @@
             .title{
                 width: 100%;
                 text-align: center;
+                color: white;
+                font-size: 2rem;
             }
             .imgLogo{
                 width: 100%;
@@ -104,6 +106,11 @@
                 border-radius: 4px;
                 cursor: pointer;
                 width: 50%;
+                -webkit-transition: background-color 0.7s ease;
+                -moz-transition: background-color 0.7s ease;
+                -o-transition: background-color 0.7s ease;
+                -ms-transition: background-color 0.7s ease;
+                transition: background-color 0.7s ease;
             }
             .btn button:hover {
                 background-color: #45a049;
@@ -119,73 +126,12 @@
         </style>
 
         <!--Scripts-->
-        <script
-                src="https://code.jquery.com/jquery-3.4.1.js"
-                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-                crossorigin="anonymous"></script>
-        <script>
-            function SubForm (){
-                $.ajax({
-                    url:'https://api.apispreadsheets.com/data/5966/',
-                    type:'post',
-                    data:$("#myForm").serializeArray(),
-                    success: function(){
-                        alert("Obrigado por se cadastrar no nosso site, enviaremos descontos especiais e novidades sobre a plataforma por e-mail.")
-                    },
-                    error: function(){
-                        alert("Ocorreu um erro :(")
-                    }
-                });
-            }
-            $('#user').ready(function () {
-                $('.selPro,.selPac,.selCom,.selComNom').hide();
-
-                // Paciente
-                $('#user').change(function () {
-                    var selected = $('#user option:selected').text();
-                    $('.selPac').toggle(selected == "Paciente");
-                });
-                // Profissional
-                $('#user').change(function () {
-                    var selected = $('#user option:selected').text();
-                    $('.selPro').toggle(selected == "Profissional de Saúde");
-                });
-                // Comércio
-                $('#user').change(function () {
-                    var selected = $('#user option:selected').text();
-                    $('.selCom,.selComNom').toggle(selected == "Comercio de Saúde (Farmácia, Laboratório, Clínica de estética)");
-                });
-                // Hide outro
-                $('#user').change(function () {
-                    var selected = $('#user option:selected').text();
-                    $('.selOtherProf').hide(selected != "Profissional de Saúde");
-                    $('.selOtherCom').hide(selected != "Comercio de Saúde (Farmácia, Laboratório, Clínica de estética)");
-
-                });
-
-            });
-            $('#profession').ready(function () {
-                $('.selOtherProf').hide();
-
-                $('#profession').change(function () {
-                    var selected = $('#profession option:selected').text();
-                    $('.selOtherProf').toggle(selected == "Outro");
-                });
-            });
-            $('#commerce').ready(function () {
-                $('.selOtherCom').hide();
-
-                $('#commerce').change(function () {
-                    var selected = $('#commerce option:selected').text();
-                    $('.selOtherCom').toggle(selected == "Outro");
-                });
-            });
-        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script type='text/javascript' src="./js/subscribe.js"></script>
 
 
         <!-- Bootstrap CSS -->
-        <!--        <link rel="stylesheet" href="css/bootstrap.min.css">-->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     </head>
@@ -311,55 +257,6 @@
             </div>
 
         </div>
-
-        <!--
-<div class="container" id="C6">
-<div class="imgLogo">
-<img src="images/Copy%20of%20LOGO%20HEEVO%20(2).png">
-</div> 
-<div>
-<h1>Pré-cadastro HeeVo</h1>
-<p>Bem vindo ao pré cadastro da Heevo, a partir dele será possível receber descontos especiais e novidades sobre o lançamento da plataforma.</p>
-</div>
-<form id="myForm">
-<div class="row">
-<div class="col-25">
-<label >Nome completo</label>
-</div>
-<div class="col-25">
-<input name="fullname" />
-</div>
-</div>
-<div class="row">
-<div class="col-25">
-<label>Email</label>
-</div>
-<div class="col-25">
-<input name="email" />
-</div>
-</div>
-<div class="row">
-<div class="col-25">
-<label>Age</label>
-</div>
-<div class="col-25">
-<input type="radio" id="age" name="datnasc" value="18-35" /> 18-35<br/>
-<input type="radio" id="age" name="datnasc" value="35+" /> 35+<br/>
-</div>
-</div>
-<div class="row">
-<div class="col-25">
-<label>Message</label>
-</div>
-<div class="col-25">
-<textarea name="user">
-</textarea>
-</div>
-</div>
-</form>
-</div>
-<button onclick="SubForm()">Submit</button>
--->
         <!-- Foot -->
         <footer>
             <div class="footerTitle">
