@@ -16,13 +16,14 @@ body a {
 }
 header{
     /*    top: 0;*/
+    z-index: 9;
     background: white;
     font-size: 24px;
     font-style: normal;
     font-weight: bold;
     /*    text-shadow: 2px 2px 2px gray;*/
     color: #226182;
-    /*    position: relative;*/
+/*        position: relative;*/
     width: 100%;
     box-shadow: 0 0 15px 0 black;
 }
@@ -254,13 +255,13 @@ width: 95%;
     display: block;
 }
 #C2 .c21-3{
-    float: right;
+    float: left;
     width:40%;
     margin: 1vw 3vw;
 }
 #C2 .c21-3 h1{
     color: #226182;
-    font-size: 2.5vw;
+    font-size: 3.5vw;
 }
 #C2 .c21-3 p{
     margin: 2vw 0;
@@ -283,9 +284,10 @@ width: 95%;
 }
 #C3{
     background-color: #226182;
-    background-image: linear-gradient(45deg, white 40%, transparent 40%), linear-gradient(135deg, white 40%, transparent 40%);
+    background-image: linear-gradient(215deg, white 35%, transparent 70%), linear-gradient(325deg, white 35%, transparent 70%);
 }
 #C3 a{
+    font-size: 1.6vw;
     color:#226182;
     -webkit-transition: color 0.7s ease;
     -moz-transition: color 0.7s ease;
@@ -297,38 +299,34 @@ width: 95%;
     color:hsl(201, 40%, 50%); 
 }
 #C3 h1{
+    margin-top: 0;
     color: #226182;
-    font-size: 3vw;
+    font-size: 3.5vw;
 }
 #C3 .c1-3{
-    float:left;
-    padding-left: 5%;
+    float:right;
+    margin:0 5% 0%;
 }
 #C3 .c2-3{
     float:left;
-    margin:0;
+    margin:5% 0% 0% 2%;
+    width: 50%;
 }
 #C3 .c2-3 img{
     width: auto;
     height: auto;
-    max-width: 90%; 
-    max-height: 90%;
-/*    float: right;*/
-    bottom: 0;
-    right: 0;
+    max-width: 85%; 
+    max-height: 85%;
 }
 #C3 p{
-    font-size: 1.6vw;
+    font-size: 2vw;
 }
 #C3 li{
-    color: #226182;
-    font-size: 1.3vw;
+    color: black;
+    font-size: 1.5vw;
 }
 #C3 ul{
     margin: 2em 0;
-}
-#C3 a{
-    font-size: 1.6vw;
 }
 #C4{
     background-color: white;
@@ -355,13 +353,14 @@ width: 95%;
 }
 #C4 li{
     font-size: 1.5vw;
+    line-height: 2vw;
 }
 #C4 .c42-3 h1{
     color: #226182;
-    font-size: 3vw;
+    font-size: 3.5vw;
 }
 #C4 .c42-3 p{
-    font-size: 1.7vw;
+    font-size: 2vw;
 }
 #C4 a{
     color:#226182;
@@ -382,24 +381,30 @@ width: 95%;
     background-color: white;
 }
 #C5 h1{
-    font-size: 3vw;
+    font-size: 3.5vw;
     color:#226182;
 }
 #C5 p{
-    font-size: 1.7vw;
+    font-size: 2vw;
 }
 #C5 li{
     font-size: 1.5vw;
     line-height: 2vw;
 }
 #C5 .c1-3{
-    padding-left: 5%;
+    width:35%;
+    margin: 4%;
+}
+#C5 .c2-3{
+    float: right;
+    width: 50%;
+    margin: 5% 0 5% 5%;
 }
 #C5 img{
     width: auto;
     height: auto;
-    max-width: 65%; 
-    max-height: 65%;
+    max-width: 95%; 
+    max-height: 95%;
 }
 #C6{
     background-color: hsl(201, 40%, 50%);
