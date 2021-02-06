@@ -40,10 +40,25 @@
                 border-radius: 4px;
                 cursor: pointer;
                 width: 50%;
+                -webkit-transition: background-color 0.7s ease;
+                -moz-transition: background-color 0.7s ease;
+                -o-transition: background-color 0.7s ease;
+                -ms-transition: background-color 0.7s ease;
+                transition: background-color 0.7s ease;
             }
 
             input[type=submit]:hover {
                 background-color: #45a049;
+            }
+            input[type="date"] {
+                padding-left: 15px;
+                padding-right: 0px;
+            }
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                display: none;
+            }
+            input:focus:required{
+                border: 1px solid black;
             }
 
             .container {
@@ -93,32 +108,10 @@
                 width:80%;
                 margin:5% 10%;
             }
-            .btn{
-                width: 50%;
-                margin: 0 25%;
-            }
-            .btn button{
-                background-color: hsl(201, 40%, 50%);
-                color: white;
-                margin: 0 25% 5rem;
-                padding: 12px 20px;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-                width: 50%;
-                -webkit-transition: background-color 0.7s ease;
-                -moz-transition: background-color 0.7s ease;
-                -o-transition: background-color 0.7s ease;
-                -ms-transition: background-color 0.7s ease;
-                transition: background-color 0.7s ease;
-            }
-            .btn button:hover {
-                background-color: #45a049;
-            }
 
             /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
             @media screen and (max-width: 600px) {
-                .col-25, .col-75, input[type=submit] {
+                .col-25, .col-75 {
                     width: 100%;
                     margin-top: 0;
                 }
@@ -127,7 +120,7 @@
 
         <!--Scripts-->
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <script type='text/javascript' src="./js/subscribe.js"></script>
+        <script type='text/javascript' src="../js/subscribe.js"></script>
 
 
         <!-- Bootstrap CSS -->
@@ -146,7 +139,7 @@
                 <h1>Pré-cadastro</h1>
                 <p>Bem vindo ao pré cadastro da Heevo, a partir dele será possível receber descontos especiais e novidades sobre o lançamento da plataforma.</p>
             </div>
-            <form id="myForm">
+            <form id="myForm" action="pc.php" method="post">
                 <div class="row">
                     <div class="col-25">
                         <label for="fullname">Nome Completo</label>
@@ -176,7 +169,8 @@
                         <label for="datnasc">Data de Nascimento</label>
                     </div>
                     <div class="col-25">
-                        <input style="resize: none;" type="date" id="datnasc" name="datnasc" placeholder="DD/MM/YYYY" required="required">
+                        <input style="resize: none;" type="date" id="datnasc" name="datnasc" placeholder="DD/MM/YYYY" required="required"
+                               pattern="\d{1,2}/\d{1,2}/\d{4}">
                     </div>
                 </div>
                 <div class="row">
@@ -186,9 +180,9 @@
                     <div class="col-25">
                         <select id="user"  name="user" required="required">
                             <option disabled selected value>Selecione..</option>
+                            <option value="comercio">Comercio de Saúde (Farmácia, Laboratório, Clínica de estética)</option>
                             <option value="paciente">Paciente</option>
                             <option value="profissional">Profissional de Saúde</option>
-                            <option value="comercio">Comercio de Saúde (Farmácia, Laboratório, Clínica de estética)</option>
                         </select>
                     </div>
                 </div>
@@ -199,13 +193,14 @@
                     <div class="col-25">
                         <select id="profession"  name="profession">
                             <option disabled selected value>Selecione..</option>
-                            <option value="paciente">Médico</option>
-                            <option value="profissional">Dentista</option>
+                            <option value="dentista">Dentista</option>
+                            <option value="farmaceutico">Farmaceutico</option>
+                            <option value="fisioterapeuta">Fisioterapeuta</option>
+                            <option value="fonoaudiologo">Fonoaudiólogo</option>
+                            <option value="medico">Médico</option>
                             <option value="nutricionista">Nutricionista</option>
                             <option value="psicologo">Psicólogo</option>
                             <option value="psiquiatra">Psiquiatra</option>
-                            <option value="fonoaudiologo">Fonoaudiólogo</option>
-                            <option value="fisioterapeuta">Fisioterapeuta</option>
                             <option value="terapeutaocupacional">Terapeuta Ocupacional</option>
                             <option value="otherProf">Outro</option>
                         </select>
@@ -226,10 +221,10 @@
                     <div class="col-25">
                         <select id="commerce"  name="commerce">
                             <option disabled selected value>Selecione..</option>
-                            <option value="farmacia">Farmácia</option>
-                            <option value="laboratorioDiagnostico">Laboratório Diagnóstico</option>
                             <option value="clinicaEstetica">Clínica de Estética</option>
                             <option value="empresaProtese">Empresa de prótese/ortese</option>
+                            <option value="farmacia">Farmácia</option>
+                            <option value="laboratorioDiagnostico">Laboratório Diagnóstico</option>
                             <option value="otherCom">Outro</option>
                         </select>
                     </div>
@@ -250,11 +245,9 @@
                         <input type="text" id="commerceName" name="commerceName" placeholder="Panvel,Frischmann..">
                     </div>
                 </div>
+                <input name="Submit" type="Submit" Value="Enviar">
 
             </form>
-            <div class="btn">
-                <button onclick="SubForm()">Submit</button>
-            </div>
 
         </div>
         <!-- Foot -->

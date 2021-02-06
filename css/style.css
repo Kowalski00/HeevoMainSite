@@ -15,6 +15,11 @@ body a {
     text-decoration: none;
     cursor: pointer;
 }
+@media screen and (max-width: 600px) {
+    #headerList{
+        font-size: 0px;
+    }
+}
 header{
     /*    top: 0;*/
     z-index: 9;
@@ -24,7 +29,7 @@ header{
     font-weight: bold;
     /*    text-shadow: 2px 2px 2px gray;*/
     color: #226182;
-/*        position: relative;*/
+    /*        position: relative;*/
     width: 100%;
     box-shadow: 0 0 15px 0 black;
 }
@@ -457,6 +462,14 @@ width: 95%;
 #FAQ li{
     color: black;
 }
+@media screen and (max-width: 600px) {
+    #CPC{
+        padding-top: 17vw;
+        text-align: center;
+        height:20vw;
+        background-color: white;
+    }
+}
 #CPC{
     text-align: center;
     height:20vw;
@@ -489,8 +502,17 @@ width: 95%;
 
 
 /* -------------------------------------------------- FOOTER -------------------------------------------------- */
+@media screen and (max-width: 600px) {
+    .f1-4 img{
+        max-width: 25px; 
+        max-height: 25px;
+    }
+    .L p{
+
+    }
+}
 footer{
-/*    position: relative;*/
+    /*    position: relative;*/
     width: 100%;
     background: #226182;
     color: white;
@@ -625,10 +647,11 @@ footer label:hover{
     display:block;
 }
 .open .accordionItemContent{
+    padding-bottom: 60px;
     padding: 10px;
     background-color: transparent;
     font-size: 1.5vw;
-    margin: 0px 0px 5px 0px;
+    margin: 0px 0px 15px 0px;
     display:block;
     -webkit-transform: scaleY(1);
     -o-transform: scaleY(1);
@@ -664,3 +687,4 @@ footer label:hover{
     color: #226182;
 }
 /* ---------------------------------------------- */
+
