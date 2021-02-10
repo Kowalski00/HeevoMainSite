@@ -28,10 +28,16 @@ if($link===false){
 $sql = "INSERT INTO precadastro (fullname,email,phone,datnasc,usertype,profession,otherprof,commerce,othercom,commercename) VALUES ('$Fullname','$Email','$Phone','$Datnasc','$Usertype','$Profession','$Otherprof', '$Commerce','$Othercom','$ComName')";
 
 if(mysqli_query($link,$sql)){
-   header("Location:https://www.heevo.life");
+    echo "<script>
+         $(window).load(function(){
+             $('#thankyouModal').modal('show');
+         });
+    </script>";
+    sleep(3);
+    header("Location:https://www.heevo.life");
 }
 else{
-   echo "ERROR: $sql . " .  mysqli_error($link);
+    echo "ERROR: $sql . " .  mysqli_error($link);
 }
 
 mysqli_close();

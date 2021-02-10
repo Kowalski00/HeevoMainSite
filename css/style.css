@@ -230,6 +230,7 @@ width: 95%;
     color:white;
     text-align: center;
     font-size: 2.25em;
+    margin: 2vw 15vw;
 }
 #C1 p{
     text-align: center;
@@ -294,7 +295,8 @@ width: 95%;
 }
 #C3{
     background-color: #226182;
-    background-image: linear-gradient(215deg, white 35%, transparent 70%), linear-gradient(325deg, white 35%, transparent 70%);
+    background-image: linear-gradient(190deg, white 30%, transparent 70%), linear-gradient(335deg, white 15%, transparent 90%);
+    height: 45vw;
 }
 #C3 a{
     font-size: 1.6vw;
@@ -315,7 +317,7 @@ width: 95%;
 }
 #C3 .c1-3{
     float:right;
-    margin:0 5% 0%;
+    margin:0 3% 0 0;
 }
 #C3 .c2-3{
     float:left;
@@ -324,7 +326,7 @@ width: 95%;
 }
 #C3 .c2-3 img{
     width: auto;
-    height: 35vw;
+    height: 40vw;
 }
 #C3 p{
     font-size: 2vw;
