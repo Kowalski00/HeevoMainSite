@@ -9,27 +9,18 @@ body{
     margin: 0;
     font-family: 'Futura';
     background-color: #226182;
-    /*    animation: 0s ease 0s 1 normal none running none;*/
 }
 body a {
     text-decoration: none;
     cursor: pointer;
 }
-@media screen and (max-width: 600px) {
-    #headerList{
-        font-size: 0px;
-    }
-}
 header{
-    /*    top: 0;*/
     z-index: 9;
     background: white;
     font-size: 24px;
     font-style: normal;
     font-weight: bold;
-    /*    text-shadow: 2px 2px 2px gray;*/
     color: #226182;
-    /*        position: relative;*/
     width: 100%;
     box-shadow: 0 0 15px 0 black;
 }
@@ -42,11 +33,14 @@ header .nav{
 header .nav div{
     display:inline-block;
 }
-#headImg img{
+.i1 img{
     height: auto; 
     width: auto; 
     max-width: 205px; 
     max-height: 205px;
+}
+.i2 img{
+    display: none;
 }
 .headerList{
     float: left;
@@ -70,36 +64,13 @@ header .nav div{
 .headerList li:hover{
     border-color: #3d82a6;
 }
-/*
-.underline li a::after {
-content: '';
-width: 0px;
-height: 1px;
-display: block;
-background: #226182;
-transition: 300ms;
-}
-
-.underline li a:hover::after {
-width: 95%;
-}
-*/
 .aLogin{
-    /*            border: 1px solid #3d82a6;*/
-    /*    border-radius:  6.25rem;*/
-    /*    padding-right: 25px;*/
-    /*    margin: 10px 15px;*/
-    /*    float: right;*/
     flex: 1;
     text-align: right;
 
 }
 .hlc{
     margin-right: 25px;
-    /*    border: 0px solid #3d82a6;*/
-    /*    transition: border-width 0.6s linear;*/
-    /*    margin-bottom: 15px;*/
-    /*    border: 1px red solid;*/
 
 }
 .hlc a{
@@ -125,10 +96,7 @@ width: 95%;
     max-height: 25px;
 }
 .hlc:hover{
-    /*    border: 1px solid #3d82a6;*/
-    /*    box-shadow: 1px 1px 1px 2px #3d82a6;*/
     border-radius:  6.25rem;
-    /*    padding: 10px;*/
 }
 .hlc a:visited{
     color: #226182;
@@ -154,6 +122,21 @@ width: 95%;
 }
 .btnCad:hover{
     background-color: hsl(201, 40%, 50%);
+}
+@media only screen and (max-width: 768px) {
+    #headerList{
+        font-size: 0px;
+    }
+    .i1 img{
+        display: none;
+    }
+    .i2 img{
+        display: inline-block;
+        height: auto; 
+        width: auto; 
+        max-width: 95px; 
+        max-height: 95px;
+    }
 }
 
 /*----------------------------- Modal Begin -----------------------------*/
@@ -249,6 +232,26 @@ width: 95%;
     overflow: auto;
     padding: 2rem 25%;
 }
+@media only screen and (max-width: 540px) {
+    #C1 h1{
+        font-size: 2.2em;
+        margin: 1vw 5vw;
+    }
+    #C1 .lead{
+        padding: 1rem 10%;
+        font-size: 1.25em;
+    }
+}
+@media only screen and (max-width: 360px) {
+    #C1 h1{
+        font-size: 1.8em;
+        margin: 1vw 3vw;
+    }
+    #C1 .lead{
+        padding: 1rem 10%;
+        font-size: 1.0em;
+    }
+}
 .row{
     overflow: auto;
 }
@@ -339,6 +342,12 @@ width: 95%;
 #C3 ul{
     margin: 1em 0;
 }
+@media only screen and (max-width: 540px) {
+    #C3 .c1-3{
+        width: 35%;
+        line-height: 2.5vw;
+    }
+}
 #C4{
     background-color: white;
     background-image: linear-gradient(355deg, #d2d2d2 20%, transparent 80%);
@@ -389,6 +398,11 @@ width: 95%;
 #C4 li{
     color: black;
 }
+@media only screen and (max-width: 540px) {
+    #C4 .c42-3{
+        line-height: 1.8vw;
+    }
+}
 #C5{
     background-color: white;
 }
@@ -407,6 +421,7 @@ width: 95%;
 #C5 .c1-3{
     width:35%;
     margin: 4%;
+    margin-top: 0;
 }
 #C5 .c2-3{
     float: right;
@@ -414,6 +429,7 @@ width: 95%;
     margin: 5% 0 5% 5%;
 }
 #C5 img{
+    float:right;
     width: auto;
     height: auto;
     max-width: 95%; 
@@ -429,8 +445,21 @@ width: 95%;
     margin: 0 25%;
     text-align: center;
 }
+#CP{
+    text-align: center;
+    height:20vw;
+    background-color: #d2d2d2;
+}
+#CP img{
+    max-height: 15vw;
+    height: 10vw;
+}
+#CP h1{
+    font-size: 3vw;
+    margin-bottom: 3vw;
+}
 #FAQ{
-    /*    background-image: linear-gradient(355deg, #d2d2d2 40%, transparent 80%);*/
+    /*    background-image: linear-gradient(355deg, #d2d2d2 40%, transparent 80%); */
     background-color: #d2d2d2;
     padding-top: 5%;
     background-image: linear-gradient(355deg, white 20%, transparent 80%);
@@ -464,6 +493,7 @@ width: 95%;
 #FAQ li{
     color: black;
 }
+
 @media screen and (max-width: 600px) {
     #CPC{
         padding-top: 17vw;
@@ -504,15 +534,7 @@ width: 95%;
 
 
 /* -------------------------------------------------- FOOTER -------------------------------------------------- */
-@media screen and (max-width: 600px) {
-    .f1-4 img{
-        max-width: 25px; 
-        max-height: 25px;
-    }
-    .L p{
 
-    }
-}
 footer{
     /*    position: relative;*/
     width: 100%;
@@ -600,6 +622,27 @@ footer label:hover{
 }
 .sL a{
     padding: 5px;
+}
+@media screen and (max-width: 768px) {
+    footer{
+        display: flex;
+       flex-flow:wrap;
+    }
+    .d3{
+        margin: 0 33%;
+        width: 33%;
+        order: 3;
+        transform: translateY(-50%);
+        padding: 0;
+    }
+    .d1{
+        width: 45%;
+        order: 1;
+    }
+    .d2{
+        width: 45%;
+        order: 2;
+    }
 }
 /* ----------------------- Accordion ----------------------- */
 .accordionWrapper{

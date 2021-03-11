@@ -29,10 +29,10 @@ $sql = "INSERT INTO precadastro (fullname,email,phone,datnasc,usertype,professio
 
 if(mysqli_query($link,$sql)){
     echo "<script>
-         $(window).load(function(){
-             $('#thankyouModal').modal('show');
-         });
-    </script>";
+                function myFunction() {
+                    alert("I am an alert box!");
+                }
+            </script>";
     sleep(3);
     header("Location:https://www.heevo.life");
 }
