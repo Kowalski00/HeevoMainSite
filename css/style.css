@@ -28,7 +28,7 @@ header .nav{
     display: flex;
     justify-content: space-between; /* Horizontally space-out items */
     align-items: center; /* Vertically center align items */
-    padding: 0px 2rem;
+    padding: 0.8rem 2rem;
 }
 header .nav div{
     display:inline-block;
@@ -42,10 +42,10 @@ header .nav div{
 .i2 img{
     display: none;
 }
-.headerList{
+.nav-links{
     float: left;
 }
-.headerList li{
+.nav-links a{
     display: inline-block;
     border: 1px solid white;
     border-radius:  6.25rem;
@@ -55,13 +55,10 @@ header .nav div{
     -o-transition: border-color 1s ease;
     -ms-transition: border-color 1s ease;
     transition: border-color 1s ease;
-}
-.headerList li a{
-    display: block;
     padding: 10px;
     color: #226182;
 }
-.headerList li:hover{
+.nav-links a:hover{
     border-color: #3d82a6;
 }
 .aLogin{
@@ -123,7 +120,20 @@ header .nav div{
 .btnCad:hover{
     background-color: hsl(201, 40%, 50%);
 }
-@media only screen and (max-width: 768px) {
+
+i.hamb {
+    display: none;
+    color: var(--color-blue);
+}
+
+@media (max-width:1250px) {
+    .nav-links {
+        position: relative;
+        right: 0;
+    }
+}
+
+@media (max-width:700px) {
     #headerList{
         font-size: 0px;
     }
@@ -137,7 +147,48 @@ header .nav div{
         max-width: 95px; 
         max-height: 95px;
     }
+    i.hamb {
+        display: block;
+    }
+
+    .nav-links a{
+        display: none;
+    }
+
+    .nav-links.menu-mobile{
+        display: block;
+        position: absolute;
+        top: 7.9rem;
+        width: 100vw;
+        height: 19vh;
+        text-align: center;
+        background: #3d82a6;
+        border-bottom-left-radius: 1rem; 
+        border-bottom-right-radius: 1rem;
+    }
+
+    .nav-links.menu-mobile a{
+        display: block;
+        color:#fff;
+        margin-top: 10px;
+        margin: 10px 20px;
+        -webkit-transition: background-color 0.7s ease;
+        -moz-transition: background-color 0.7s ease;
+        -o-transition: background-color 0.7s ease;
+        -ms-transition: background-color 0.7s ease;
+        transition: background-color 0.7s ease;
+    }
+    .nav-links.menu-mobile a:focus{
+        background-color: white;
+    }
 }
+
+@media (max-width:410px) {
+    .btnCad{
+        font-size: 15px;
+    }
+}
+
 
 /*----------------------------- Modal Begin -----------------------------*/
 /* The Modal (background) */
