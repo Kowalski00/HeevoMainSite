@@ -17,18 +17,19 @@ body a {
 header{
     z-index: 9;
     background: white;
-    font-size: 24px;
+    font-size: 1.4vw;
     font-style: normal;
     font-weight: bold;
     color: #226182;
     width: 100%;
+    height: 5.3vw;
     box-shadow: 0 0 15px 0 black;
 }
 header .nav{
     display: flex;
     justify-content: space-between; /* Horizontally space-out items */
     align-items: center; /* Vertically center align items */
-    padding: 0.8rem 2rem;
+    padding: 0.5vw 2vw;
 }
 header .nav div{
     display:inline-block;
@@ -36,8 +37,7 @@ header .nav div{
 .i1 img{
     height: auto; 
     width: auto; 
-    max-width: 205px; 
-    max-height: 205px;
+    width: 15vw; 
 }
 .i2 img{
     display: none;
@@ -48,14 +48,14 @@ header .nav div{
 .nav-links a{
     display: inline-block;
     border: 1px solid white;
-    border-radius:  6.25rem;
+    border-radius:  6.25vw;
     cursor: pointer;
     -webkit-transition: border-color 1s ease;
     -moz-transition: border-color 1s ease;
     -o-transition: border-color 1s ease;
     -ms-transition: border-color 1s ease;
     transition: border-color 1s ease;
-    padding: 10px;
+    padding: 0.5vw;
     color: #226182;
 }
 .nav-links a:hover{
@@ -93,7 +93,7 @@ header .nav div{
     max-height: 25px;
 }
 .hlc:hover{
-    border-radius:  6.25rem;
+    border-radius:  6.25vw;
 }
 .hlc a:visited{
     color: #226182;
@@ -105,8 +105,8 @@ header .nav div{
     font-size: inherit;
     text-align: center;
     text-decoration: none;
-    padding: 8px;
-    border-radius: 6.25rem;
+    padding: 0.5vw;
+    border-radius: 6.25vw;
     position: relative;
     float:right;
     margin-left: auto;
@@ -213,7 +213,7 @@ i.hamb {
     padding: 20px;
     border: 1px solid #226182;
     width: 40%; /* Could be more or less, depending on screen size */
-    border-radius: 0.25rem;
+    border-radius: 0.25vw;
 }
 
 /* The Close Button */
@@ -250,7 +250,7 @@ i.hamb {
     /*    position: relative;*/
     width: 100%;
     display: block;
-    height: 40vw;
+    height: 35vw;
     background-color: white;
 }
 #C1{
@@ -263,8 +263,8 @@ i.hamb {
 #C1 h1{
     color:white;
     text-align: center;
-    font-size: 2.8em;
-    margin: 2vw 15vw;
+    font-size: 3vw;
+    margin: 1vw 5vw;
 }
 #C1 p{
     text-align: center;
@@ -272,16 +272,16 @@ i.hamb {
     font-family: 'Nunito', sans-serif;
 }
 #C1 .lead{
-    padding: 2rem 25%;
-    font-size: 1.25em;
+    padding: 2vw 20%;
+    font-size: 1.3vw;
 }
 #C1 img{
     color: white;
-    max-height: 50%;
-    max-width: 50%;
+    height: 50%;
+    width: 50%;
     display: block;
     overflow: auto;
-    padding: 2rem 25%;
+    padding: 2vw 25%;
 }
 @media only screen and (max-width: 540px) {
     #C1 h1{
@@ -325,17 +325,17 @@ i.hamb {
 }
 #C2 .c21-3 h1{
     color: #226182;
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 #C2 .c21-3 p{
     font-family: 'Poppins', sans-serif;
-    margin: 2vw 0;
+    margin: 2vw 7vw 2vw 0;
 }
 #C2 .c21-3 p{
     text-align: justify;
     color: black;
-    font-size: 1.7vw;
-    line-height: 2.5vw;
+    font-size: 1.2vw;
+    line-height: 2.0vw;
 }
 .c1-3{
     height: 100%;
@@ -347,12 +347,12 @@ i.hamb {
     float: left;
     width: 50%;
 }
-#C3{
+#CPP{
     background-color: #226182;
     background-image: linear-gradient(190deg, white 30%, transparent 70%), linear-gradient(335deg, white 15%, transparent 90%);
     height: 45vw;
 }
-#C3 a{
+#CPP a{
     font-size: 1.6vw;
     color:#226182;
     -webkit-transition: color 0.7s ease;
@@ -361,80 +361,79 @@ i.hamb {
     -ms-transition: color 0.7s ease;
     transition: color 0.7s ease;
 }
-#C3 a:hover{
+#CPP a:hover{
     color:hsl(201, 40%, 50%); 
 }
-#C3 h1{
+#CPP h1{
     margin-top: 0;
     color: #226182;
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
-#C3 .c1-3{
+#CPP .c1-3{
     float:right;
-    margin:0 3% 0 0;
+    margin: 10% 3% 10% 0;
 }
-#C3 .c2-3{
+#CPP .c2-3{
     float:left;
     margin:5% 0% 0% 2%;
     width: 50%;
 }
-#C3 .c2-3 img{
+#CPP .c2-3 img{
     width: auto;
     height: 40vw;
 }
-#C3 p{
-    font-size: 2vw;
+#CPP p{
+    font-size: 1.6vw;
 }
-#C3 li{
+#CPP li{
     color: black;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     font-family: 'Poppins', sans-serif;
 }
-#C3 ul{
+#CPP ul{
     margin: 1em 0;
 }
 @media only screen and (max-width: 540px) {
-    #C3 .c1-3{
+    #CPP .c1-3{
         width: 35%;
         line-height: 2.5vw;
     }
 }
-#C4{
+#CPacientes{
     background-color: white;
     background-image: linear-gradient(355deg, #d2d2d2 20%, transparent 80%);
 }
-#C4 .c41-3{
+#CPacientes .c41-3{
     float: left;
     width: 50%;
     margin: 5% 5% 5% 0;
 }
-#C4 .c41-3 img{
+#CPacientes .c41-3 img{
     width: auto;
     height: auto;
-    max-width: 100%; 
-    max-height: 100%;
+    max-height: 30vw;
 }
-#C4 .c42-3{
-    /*    border: 1px red solid;*/
+#CPacientes .c42-3{
     border: 0px;
     width: 40%;
+    margin-top:5%;
     float: left;
     padding-right: 5%;
     line-height: 2.8vw;
 }
-#C4 li{
+#CPacientes li{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     line-height: 2vw;
 }
-#C4 .c42-3 h1{
+#CPacientes .c42-3 h1{
     color: #226182;
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
-#C4 .c42-3 p{
-    font-size: 2vw;
+#CPacientes .c42-3 p{
+    font-size: 1.7vw;
 }
-#C4 a{
+#CPacientes a{
     color:#226182;
     -webkit-transition: color 0.7s ease;
     -moz-transition: color 0.7s ease;
@@ -443,60 +442,62 @@ i.hamb {
     transition: color 0.7s ease;
     font-size: 1.7vw;
 }
-#C4 a:hover{
+#CPacientes a:hover{
     color:hsl(201, 40%, 50%); 
 }
-#C4 li{
+#CPacientes li{
     color: black;
 }
 @media only screen and (max-width: 540px) {
-    #C4 .c42-3{
+    #CPacientes .c42-3{
         line-height: 1.8vw;
     }
 }
-#C5{
+#CCom{
     background-color: white;
 }
-#C5 h1{
-    font-size: 3vw;
+#CCom h1{
+    font-size: 2.5vw;
     color:#226182;
 }
-#C5 p{
-    font-size: 2vw;
+#CCom p{
+    font-size: 1.7vw;
 }
-#C5 li{
-    font-size: 1.5vw;
+#CCom li{
+    font-size: 1.2vw;
     line-height: 2vw;
     font-family: 'Poppins', sans-serif;
 }
-#C5 .c1-3{
+#CCom .c1-3{
     width:35%;
-    margin: 4%;
-    margin-top: 0;
+    margin: 0 4% 4%;
+    margin-top: 6%;
 }
-#C5 .c2-3{
+#CCom .c2-3{
     float: right;
     width: 50%;
     margin: 5% 0 5% 5%;
 }
-#C5 img{
+#CCom img{
     float:right;
     width: auto;
     height: auto;
-    max-width: 95%; 
-    max-height: 95%;
+    max-height: 30vw;
 }
+/*
 #C6{
     background-color: hsl(201, 40%, 50%);
     padding-top: 5%;
     background-image: linear-gradient(355deg, white 20%, transparent 80%);
 }
+*/
 .cm{
     width:50%;
     margin: 0 25%;
     text-align: center;
 }
 #CP{
+    padding-top: 5vw;
     text-align: center;
     height:20vw;
     background-color: #d2d2d2;
@@ -506,7 +507,7 @@ i.hamb {
     height: 10vw;
 }
 #CP h1{
-    font-size: 3vw;
+    font-size: 2.5vw;
     margin-bottom: 3vw;
 }
 #FAQ{
@@ -529,12 +530,12 @@ i.hamb {
     display: inline-block;
 }
 #FAQ #p1{
-    font-size: 2.7vw;
+    font-size: 2.3vw;
     margin: 0 1vw;
     color: #226182;
 }
 #FAQ #p2{
-    font-size: 2.5vw;
+    font-size: 2.0vw;
 }
 #FAQ .c1-3{
     float: none;
@@ -561,12 +562,12 @@ i.hamb {
 #CPC a{
     display: inline-block;
     background-color: hsl(201, 40%, 50%);
-    margin: 2em 1em;
-    padding: 0.5em 0.6em;
+    margin: 2vw 1vw;
+    padding: 0.5vw 0.6vw;
     color: white;
-    border-radius: 2.9em;
+    border-radius: 2.9vw;
     text-decoration: none;
-    font-size: 2.3vw;
+    font-size: 2.0vw;
     -webkit-transition: background-color 0.5s ease;
     -moz-transition: background-color 0.5s ease;
     -o-transition: background-color 0.5s ease;
@@ -591,7 +592,7 @@ footer{
     width: 100%;
     background: #226182;
     color: white;
-    font-size: 1.25rem;
+    font-size: 1.4vw;
     display: inline-block;
     text-align: center;
 }
@@ -602,7 +603,7 @@ footer a{
     color: white;
 }
 #iconsSocial{
-    font-size: 1.45rem;
+    font-size: 1.45vw;
 }
 footer label{
     cursor: pointer;
@@ -672,7 +673,7 @@ footer label:hover{
     line-height: 35px;
 }
 .sL a{
-    padding: 5px;
+    padding: 15px;
 }
 @media screen and (max-width: 768px) {
     footer{
@@ -714,15 +715,15 @@ footer label:hover{
 .accordionItemHeading{
     cursor:pointer;
     margin:0px 0px 5px 0px;
-    padding:0.5rem;
+    padding:0.5vw;
     background:#2980b9;
     color:#fff;
     width:100%;
-    -webkit-border-radius: 0.65rem;
-    -moz-border-radius: 0.65rem;
-    border-radius: 0.65rem;
+    -webkit-border-radius: 0.65vw;
+    -moz-border-radius: 0.65vw;
+    border-radius: 0.65vw;
     box-sizing: border-box;
-    font-size: 1.6vw;
+    font-size: 1.4vw;
     -webkit-transition: background-color 0.5s ease;
     -moz-transition: background-color 0.5s ease;
     -o-transition: background-color 0.5s ease;
@@ -746,7 +747,7 @@ footer label:hover{
     padding-bottom: 60px;
     padding: 10px;
     background-color: transparent;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     margin: 0px 0px 15px 0px;
     display:block;
     -webkit-transform: scaleY(1);
