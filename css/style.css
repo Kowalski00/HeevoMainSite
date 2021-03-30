@@ -153,7 +153,7 @@ i.hamb {
     .nav-btn{
         position: fixed;
         margin-left: 40%;
-        
+
     }
     .btnCad{
         display: inline;
@@ -208,47 +208,6 @@ i.hamb {
 }
 
 
-/*----------------------------- Modal Begin -----------------------------*/
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-    color: #226182;
-    background-color: white;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #226182;
-    width: 40%; /* Could be more or less, depending on screen size */
-    border-radius: 0.25vw;
-}
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 1.75em;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-/*----------------------------- Modal End -----------------------------*/
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
     position: fixed;
@@ -301,7 +260,7 @@ i.hamb {
     overflow: auto;
     padding: 2vw 25%;
 }
-@media only screen{
+@media only screen and (max-width:700px) {
     #C1 h1{
         font-size: 2.5vh;
         margin: 1vw 5vw;
@@ -343,7 +302,7 @@ i.hamb {
     font-size: 1.2vw;
     line-height: 2.0vw;
 }
-@media only screen{
+@media only screen and (max-width:700px) {
     #C2 .c21-3 h1{
         font-size: 3.3vw;
         margin: 1vw 0;
@@ -411,7 +370,7 @@ i.hamb {
 #CPP ul{
     margin: 1em 0;
 }
-@media only screen{
+@media only screen and (max-width:700px) {
     #CPP{
         height: 50vw;
     }
@@ -490,7 +449,7 @@ i.hamb {
 #CPacientes li{
     color: black;
 }
-@media only screen{
+@media only screen and (max-width:700px) {
     #CPacientes{
         height: 45vw;
     }
@@ -550,7 +509,7 @@ i.hamb {
     height: auto;
     max-height: 30vw;
 }
-@media only screen{
+@media only screen and (max-width:700px) {
     #CCom{
         height: 50vw;
     }
@@ -581,9 +540,9 @@ i.hamb {
 }
 /*
 #C6{
-    background-color: hsl(201, 40%, 50%);
-    padding-top: 5%;
-    background-image: linear-gradient(355deg, white 20%, transparent 80%);
+background-color: hsl(201, 40%, 50%);
+padding-top: 5%;
+background-image: linear-gradient(355deg, white 20%, transparent 80%);
 }
 */
 .cm{
@@ -605,7 +564,7 @@ i.hamb {
     font-size: 2.5vw;
     margin-bottom: 3vw;
 }
-@media only screen{
+@media only screen and (max-width:700px) {
     #CP{
         padding-top: 10vw;
     }
@@ -645,7 +604,7 @@ i.hamb {
 #FAQ li{
     color: black;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width:700px) {
     #FAQ #p1{
         font-size: 3vw;
     }
@@ -682,7 +641,7 @@ i.hamb {
     max-height: 1.1rem;
     max-width: 1.1rem;
 }
-@media screen{
+@media screen and (max-width:700px) {
     #CPC{
         padding-top: 17vw;
         text-align: center;
@@ -788,11 +747,11 @@ footer label:hover{
 .sL a{
     padding: 15px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width:700px) {
     footer{
         height: 5vw;
         display: flex;
-       flex-flow:wrap;
+        flex-flow:wrap;
     }
     .d3{
         width: 45%;
@@ -901,7 +860,7 @@ footer label:hover{
     background-color: #c2e0ef;
     color: #226182;
 }
-@media screen{
+@media screen and (max-width:700px) {
     .accordionItemHeading{
         margin:0px 0px 5px 0px;
         padding:0.5vw;
