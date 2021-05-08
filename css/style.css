@@ -293,15 +293,25 @@ i.hamb {
     padding: 2vw 20%;
     font-size: 1.3vw;
 }
+#C1 .container-c1{
+    position: relative;
+}
 #C1 img{
     color: white;
-    height: 50%;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     display: block;
     overflow: auto;
-    padding: 2vw 25%;
+    opacity: 0.3;
+    padding: 0 2%;
+    z-index: 2;
 }
-@media only screen{
+#C1 iframe{
+    position: absolute;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
     #C1 h1{
         font-size: 2.5vh;
         margin: 1vw 5vw;
@@ -343,7 +353,7 @@ i.hamb {
     font-size: 1.2vw;
     line-height: 2.0vw;
 }
-@media only screen{
+@media only screen and (max-width: 768px) {
     #C2 .c21-3 h1{
         font-size: 3.3vw;
         margin: 1vw 0;
@@ -411,7 +421,7 @@ i.hamb {
 #CPP ul{
     margin: 1em 0;
 }
-@media only screen{
+@media only screen and (max-width: 768px) {
     #CPP{
         height: 50vw;
     }
@@ -490,7 +500,7 @@ i.hamb {
 #CPacientes li{
     color: black;
 }
-@media only screen{
+@media only screen and (max-width: 768px) {
     #CPacientes{
         height: 45vw;
     }
@@ -550,7 +560,7 @@ i.hamb {
     height: auto;
     max-height: 30vw;
 }
-@media only screen{
+@media only screen and (max-width: 768px) {
     #CCom{
         height: 50vw;
     }
@@ -605,7 +615,7 @@ i.hamb {
     font-size: 2.5vw;
     margin-bottom: 3vw;
 }
-@media only screen{
+@media only screen and (max-width: 768px) {
     #CP{
         padding-top: 10vw;
     }
