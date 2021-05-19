@@ -57,13 +57,28 @@
         <div class="main">
             <div id="C1">
                 <section>
-                    <h1 class="display-4">A plataforma que vai aprimorar a qualidade e agilidade do sistema de saúde público e privado</h1>
-                    <p class="lead">Aumente o rendimento dos seus atendimentos, economizando tempo, evitando erros de prescrição, com prontuário digital salvo em nuvem e de maneira sustentável.</p>
+                    <div class="container-0">
+                        <h1 class="display-4">A plataforma que vai aprimorar a qualidade e agilidade do sistema de saúde público e privado</h1>
+                        <p class="lead">Aumente o rendimento dos seus atendimentos, economizando tempo, evitando erros de prescrição, com prontuário digital salvo em nuvem e de maneira sustentável.</p>
+                    </div>
                     <div class="container-c1">
-                        <iframe src="https://www.youtube.com/embed/7hLNOAnsh4U" frameborder="0" allowfullscreen></iframe>
-                        <img src="./images/schemaH.png">
+                        <div class="mock-video">
+                            <img id="mdl" src="./images/ytPlay.jpg">
+                        </div>
+                        <img class="schema" src="./images/schemaH.png">
                     </div>
                 </section>
+            </div>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div id="modal-video" class="modal-content">
+                    <!--                    <span class="close">&times;</span>-->
+                    <iframe src="https://www.youtube.com/embed/7hLNOAnsh4U" frameborder="0" allowfullscreen></iframe>
+                </div>
+
             </div>
 
             <div class="content" id="C2">
@@ -196,36 +211,63 @@
                 <a href="http://heevo.life/precadastro">Realize seu pré-cadastro!</a>
             </div>
         </div>
-    <!-- Footer -->
-    <footer>
-        <div class="f1-4 L d3">
-            <p>
-                <a href="#top"><img src="images/faviconF.png" valign="middle"; vspace="4"; hspace="4";></a>HeeVo &copy 2020
-            </p>
-        </div>
-        <div class="f2-4 d1">
-            <div class="vC fL">
-                <ul>
-                    <li><a href="#C2">Sobre nós</a></li>
-                    <li><a href="mailto:help@heevo.life" id="btnMail" class ="btnModal">Contato</a></li>
-                </ul>
+        <!-- Footer -->
+        <footer>
+            <div class="f1-4 L d3">
+                <p>
+                    <a href="#top"><img src="images/faviconF.png" valign="middle"; vspace="4"; hspace="4";></a>HeeVo &copy 2020
+                </p>
             </div>
-        </div>
-        <div class="f1-4 d2" id="iconsSocial">
-            <div class="vC sL">
-                <a href="https://www.instagram.com/heevo.life/"><i class="fa"></i></a>
-                <a href="https://www.linkedin.com/company/heevo/"><i class="fa fa-linkedin"></i></a>
+            <div class="f2-4 d1">
+                <div class="vC fL">
+                    <ul>
+                        <li><a href="#C2">Sobre nós</a></li>
+                        <li><a href="mailto:help@heevo.life" id="btnMail" class ="btnModal">Contato</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
+            <div class="f1-4 d2" id="iconsSocial">
+                <div class="vC sL">
+                    <a href="https://www.instagram.com/heevo.life/"><i class="fa"></i></a>
+                    <a href="https://www.linkedin.com/company/heevo/"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
 
-    </footer>
+        </footer>
 
-    <!-- Scripts -->
-    <!--        <script type='text/javascript' src="js/translate.js"></script>-->
-    <script type='text/javascript' src="./js/anchor.js"></script>
-    <script type='text/javascript' src="./js/stickyHeader.js"></script>
-    <script type='text/javascript' src="./js/modalAccordion.js"></script>
-    <script type='text/javascript' src="./js/nav.js"></script>
+        <!-- Scripts -->
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("mdl");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <!--        <script type='text/javascript' src="js/translate.js"></script>-->
+        <script type='text/javascript' src="./js/anchor.js"></script>
+        <script type='text/javascript' src="./js/stickyHeader.js"></script>
+        <script type='text/javascript' src="./js/modalAccordion.js"></script>
+        <script type='text/javascript' src="./js/nav.js"></script>
 
     </body>
 </html>
