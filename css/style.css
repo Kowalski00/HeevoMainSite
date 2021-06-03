@@ -762,33 +762,15 @@ i.hamb {
 /* -------------------------------------------------- FOOTER -------------------------------------------------- */
 
 footer{
-    /*    position: relative;*/
-    width: 100%;
     background: #226182;
     color: white;
     font-size: 1.4vw;
-    display: inline-block;
-    text-align: center;
 }
 footer ul{
     list-style: none;
 }
 footer a{
     color: white;
-}
-#iconsSocial{
-    font-size: 1.45vw;
-}
-footer label{
-    cursor: pointer;
-    display: block;
-    position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-footer a,label{
     -webkit-transition: color 0.4s ease;
     -moz-transition: color 0.4s ease;
     -o-transition: color 0.4s ease;
@@ -801,81 +783,43 @@ footer a:visited{
 footer a:hover{
     color: hsl(201, 40%, 50%);
 }
-footer label:hover{
-    color: hsl(201, 40%, 50%);
+.footer-distributed{
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    margin:0;
+    padding: 0;
 }
-.f1-4{
-    display: block;
-    float: left;
-    width: 24%;
-    height: 12rem;
-}
-.f2-4{
-    display: block;
-    float: left;
-    width: 50%;
-    height: 12rem;
-}
-.L img{
-    padding:0.5em;
-}
-.L p{
-    display: table-cell;
-    vertical-align: middle;
-    padding: 10px 0;
-    position: relative;
-    transform: translateY(50%);
-}
-.f1-4 span{
-    border-radius: 75%;
+.column-1, .column-2,
+.column-3, .column-4{
+    width: 23%;
+/*    border: 3px red solid;*/
     display: inline-block;
+	vertical-align: middle;
 }
-.f1-4 img{
-    height: auto; 
-    width: auto; 
-    max-width: 55px; 
-    max-height: 55px;
-    padding-right: 5px;
+footer li{
+    padding-bottom: 1vh;
 }
-.vC{
-    border: transparent 1px solid; /* do not remove, helps center vertically */
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+.column-1 .footer-logo{
+    padding-top: 1vh;
+    font-size: 1.3vw;
 }
-.vC ul li{
-    line-height: 35px;
+.column-1 .footer-about{
+    font-size: 1.1vw;
 }
-.sL a{
-    padding: 15px;
+.column-4 .footer-icons{
+    font-size: 1.8vw;
 }
-#iconsSocial img{
-    height: 3vh;
+.column-4 .footer-icons #a-pad{
+    padding-right: 1vw;
 }
+
+
 @media screen and (max-width: 768px) {
     footer{
         height: 5vw;
         display: flex;
-       flex-flow:wrap;
-    }
-    .d3{
-        width: 45%;
-        order: 1;
-    }
-    .d1{
-        width: 45%;
-        order: 1;
-    }
-    .d2{
-        height: 4vh;
-        width: 100%;
-        order:0;
-    }
-    .f1-4{
-        font-size: 2.5vw;
-    }
-    .f2-4{
-        font-size: 2.5vw;
+        flex-flow: wrap;
     }
 }
 /* ----------------------- Accordion ----------------------- */
