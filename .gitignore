@@ -4,6 +4,9 @@
 
 # Folders
 BKPImages/
+BKPImgs/
+font-awesome-4.7.0/
+icomoon/
 
 ### Images ###
 # JPEG
@@ -74,5 +77,8 @@ BKPImages/
 
 # Zip
 *.zip
+
+# Log
+*.log
 
 # End of https://www.toptal.com/developers/gitignore/api/images
